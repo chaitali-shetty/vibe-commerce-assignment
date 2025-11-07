@@ -36,7 +36,7 @@ The project implements all required features:
 
 ### **Database**
 - MongoDB Community Server  
-- Database: `vibe-commerce1`  
+- Database: `vibe-commerce`  
 - Collections: `products`, `carts`
 
 ---
@@ -82,7 +82,7 @@ cd vibe-commerce-assignment
 - npm install
 - Create `.env`:
   PORT=5000  
-  MONGODB_URI=mongodb://127.0.0.1:27017/vibe-commerce1
+  MONGODB_URI=mongodb://127.0.0.1:27017/vibe-commerce
 - Seed sample products:
   npm run seed
 - Run backend server:
