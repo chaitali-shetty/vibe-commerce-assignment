@@ -14,8 +14,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/vibe-comm
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('✅ MongoDB Connected'))
-.catch(err => console.error('❌ MongoDB Connection Error:', err));
+.then(() => console.log(' MongoDB Connected'))
+.catch(err => console.error(' MongoDB Connection Error:', err));
 
 // Import Routes
 const productRoutes = require('./routes/products');
@@ -46,5 +46,5 @@ app.use((req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(` Server running on port ${PORT}`);
 });
