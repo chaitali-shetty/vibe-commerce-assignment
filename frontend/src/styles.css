@@ -1,0 +1,81 @@
+/* Theme variables */
+:root {
+  --bg: #f6f7fb;
+  --fg: #0f1115;
+  --fg-strong: #111318;
+  --fg-muted: #667085;
+  --card: #ffffff;
+  --border: rgba(0,0,0,.08);
+  --muted: #f3f5f7;
+  --badge-bg: rgba(17,17,17,.85);
+  --badge-fg: #fff;
+  --btn: linear-gradient(135deg,#111 0%,#333 100%);
+  --btn-fg: #fff;
+  --shadow-1: 0 6px 18px rgba(0,0,0,.06);
+  --shadow-2: 0 10px 26px rgba(0,0,0,.10);
+}
+
+:root.dark {
+  --bg: #0b0d10;
+  --fg: #e9edf3;
+  --fg-strong: #ffffff;
+  --fg-muted: #98a2b3;
+  --card: #12161b;
+  --border: rgba(255,255,255,.08);
+  --muted: #1a2027;
+  --badge-bg: rgba(255,255,255,.12);
+  --badge-fg: #e9edf3;
+  --btn: linear-gradient(135deg,#2d3748 0%,#1a202c 100%);
+  --btn-fg: #e9edf3;
+  --shadow-1: 0 6px 18px rgba(0,0,0,.5);
+  --shadow-2: 0 10px 26px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+html, body { height:100%; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:
+    radial-gradient(1200px 600px at -10% -10%, #e8f0ff44 0%, transparent 60%),
+    radial-gradient(1000px 500px at 110% -10%, #ffe9f044 0%, transparent 60%),
+    var(--bg);
+  color: var(--fg);
+}
+
+/* layout */
+.container { max-width: 1100px; margin: 20px auto; padding: 0 16px; display: grid; gap: 20px; }
+.layout { display: grid; grid-template-columns: 1fr 360px; gap: 20px; }
+@media (max-width: 880px) { .layout { grid-template-columns: 1fr; } }
+
+/* header */
+.header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.header-right { display:flex; align-items:center; gap:12px; }
+
+/* search */
+.search { position:relative; }
+.search input {
+  width: min(52vw, 420px);
+  padding: 10px 30px 10px 12px;
+  border:1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--fg);
+  outline: none;
+}
+.kbd {
+  position:absolute; right:8px; top:50%; transform:translateY(-50%);
+  font-size:12px; color: var(--fg-muted); background: var(--muted); padding: 2px 6px; border-radius: 6px;
+}
+
+/* dark mode btn */
+.mode { background: var(--card); color: var(--fg); border:1px solid var(--border); border-radius: 8px; padding: 8px 10px; cursor:pointer; }
+
+/* receipt */
+.receipt { margin-top:12px; padding:12px; background: var(--card); border-radius: 12px; border:1px solid var(--border); }
+
+/* cart box override for dark mode */
+.cart { background: var(--card); border:1px solid var(--border); }
