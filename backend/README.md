@@ -113,5 +113,12 @@ cd vibe-commerce-assignment
 
 ### Checkout
 - POST /api/checkout   { cartItems }
+## Screenshots
+<img src="./screenshots/products.png" width="800" />
+<img src="./screenshots/cart.png" width="800" />
+<img src="./screenshots/checkout-modal.png" width="600" />
+<img src="./screenshots/receipt.png" width="600" />
+<img src="./screenshots/dark-mode.png" width="800" />
+<img src="./screenshots/showcase.png" width="800" />
 
 
